@@ -24,6 +24,7 @@ const XrHitBox = () => {
     let id = Date.now();
     setCubes([...cubes, { position, id }]);
   };
+  const { isPresenting } = useXR();
 
   useThree(({ camera }) => {
     if (!isPresenting) {
@@ -31,7 +32,6 @@ const XrHitBox = () => {
     }
   });
 
-  const { isPresenting } = useXR();
   return (
     <>
       <ambientLight />
