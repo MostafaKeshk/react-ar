@@ -1,21 +1,18 @@
-import { OrbitControls } from "@react-three/drei";
+/* eslint-disable react/prop-types */
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
-const XrCube = () => {
+const XrCube = (props) => {
   const cubeRef = useRef();
-
   useFrame((state, delta) => {
     cubeRef.current.rotation.y += delta;
   });
 
   return (
     <>
-      <ambientLight />
-      <OrbitControls />
-      <mesh ref={cubeRef} position-z={-5}>
-        <boxGeometry args={[2, 2, 2]} />
-        <meshStandardMaterial color="purple" />
+      <mesh ref={cubeRef} position={props.position}>
+        <boxGeometry args={[0.5, 0.5, 0.5]} />
+        <meshStandardMaterial color="mediumpurple" />
       </mesh>
     </>
   );

@@ -13,7 +13,7 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react/jsx-no-target-blank': 'off',
-    "react/no-unknown-property": ["error", { "ignore": ["args","position-z","rotation-x"] }],
+    "react/no-unknown-property": ["error", { "ignore": ["args","position-z","rotation-x","position"] }],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
