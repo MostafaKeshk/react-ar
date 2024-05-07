@@ -12,7 +12,6 @@ const XrCubeContainer = () => {
       />
       <Canvas>
         <XR>
-          {/* <XrCube /> */}
           <XrHitBox />
         </XR>
       </Canvas>
